@@ -1,0 +1,33 @@
+stages:
+  - first
+  - second
+  - third
+
+print_first:
+  stage: first
+  tags:
+    -build
+  only:
+    - test
+  script:
+    - echo "Hello world first"
+
+
+print_second:
+  stage: second
+  tags:
+    -build
+  only:
+    - test
+  script:
+    - echo "Hello world second"
+
+
+print_third:
+  stage: third
+  tags:
+    -build
+  only:
+    - test
+  script:
+    - echo "Hello world third"
